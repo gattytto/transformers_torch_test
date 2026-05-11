@@ -15,10 +15,3 @@ RUN pip install --break-system-packages --no-cache-dir \
     "transformers>=4.51,<5" \
     "accelerate" \
     "safetensors"
-
-COPY app.py /app/app.py
-RUN chmod -R a+rX /app
-
-EXPOSE 8000
-
-CMD ["python", "/app/app.py"]
