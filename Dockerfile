@@ -8,7 +8,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-RUN pip install --root-user-action --no-cache-dir \
+RUN pip install --break-system-packages --no-cache-dir \
     "fastapi>=0.115,<1" \
     "uvicorn[standard]>=0.32,<1" \
     "sentence-transformers>=5,<6" \
